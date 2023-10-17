@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Unit
 
 @export var health : int = 100
 @export var damage : int = 20

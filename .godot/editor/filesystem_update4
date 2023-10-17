@@ -2,3 +2,8 @@ res://Scenes/unit.tscn
 res://Scenes/Unit.gd
 res://Scripts/Unit.gd
 res://Scenes/main.tscn
+res://Scenes/playerunit.tscn
+res://Scripts/PlayerUnit.gd
+res://Scenes/enemy_unit.tscn
+res://Scripts/EnemyUnit.gd
+res://Scenes/player_unit.tscn
