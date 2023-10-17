@@ -187,5 +187,17 @@ zoom = Vector2(2.6, 2.6)
 [node name="PlayerUnit" parent="." instance=ExtResource("3_vex42")]
 position = Vector2(-94, 23)
 
+[node name="PlayerUnit2" parent="." instance=ExtResource("3_vex42")]
+position = Vector2(-70, -41)
+
+[node name="PlayerUnit3" parent="." instance=ExtResource("3_vex42")]
+position = Vector2(-95, 63)
+
 [node name="EnemyUnit" parent="." instance=ExtResource("3_lrcwh")]
 position = Vector2(74, 10)
+
+[node name="EnemyUnit2" parent="." instance=ExtResource("3_lrcwh")]
+position = Vector2(53, 58)
+
+[node name="EnemyUnit3" parent="." instance=ExtResource("3_lrcwh")]
+position = Vector2(76, -35)

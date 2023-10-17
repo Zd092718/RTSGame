@@ -19,7 +19,13 @@ var sprite : Sprite2D
 func _ready():
 	agent = $NavigationAgent2D
 	sprite = $Sprite
-	#move_to_location(Vector2(74, -40))
+	
+	var gm = get_node("/root/Main")
+	
+	if is_player:
+		gm.players.append(self)
+	else:
+		gm.enemies.append(self)
 	
 func _physics_process(delta):
 	if agent.is_navigation_finished(): 
@@ -32,7 +38,7 @@ func _physics_process(delta):
 	
 func _process(delta):
 	_target_check()
-
+# checks for targets and sets nav agent accordingly
 func _target_check():
 	if target != null:
 		var dist = global_position.distance_to(target.global_position)
