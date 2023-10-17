@@ -7,3 +7,4 @@ res://Scripts/PlayerUnit.gd
 res://Scenes/enemy_unit.tscn
 res://Scripts/EnemyUnit.gd
 res://Scenes/player_unit.tscn
+res://Scripts/GameManager.gd

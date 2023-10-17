@@ -1,6 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cfiroj3fb7l2s"]
+[gd_scene load_steps=10 format=3 uid="uid://cfiroj3fb7l2s"]
 
+[ext_resource type="Script" path="res://Scripts/GameManager.gd" id="1_q6tev"]
 [ext_resource type="Texture2D" uid="uid://btpvlcbb1tdlk" path="res://Sprites/tilemap.png" id="1_ucnvi"]
+[ext_resource type="PackedScene" uid="uid://cngbe7x7j84rn" path="res://Scenes/enemy_unit.tscn" id="3_lrcwh"]
 [ext_resource type="PackedScene" uid="uid://c565im4wskjiu" path="res://Scenes/player_unit.tscn" id="3_vex42"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_damx0"]
@@ -144,21 +146,22 @@ tile_layout = 5
 sources/0 = SubResource("TileSetAtlasSource_damx0")
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_qawet"]
-vertices = PackedVector2Array(130, 223, 64, 224, 64, 194, 82, 194, 128, 113, 82, 143, 111, 113, 63, 33, 129, 33, 129, 63, 111, 63, 64, 142)
+vertices = PackedVector2Array(130, 223, 64, 224, 64, 197, 84, 197, 127, 118, 84, 139, 107, 118, 63, 33, 129, 33, 129, 56, 107, 56, 64, 139)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 0, 3, 5, 6), PackedInt32Array(7, 8, 9, 10), PackedInt32Array(11, 7, 10, 6, 5)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(63, 33, 129, 33, 129, 63, 111, 63, 111, 113, 128, 113, 130, 223, 64, 224, 64, 194, 82, 194, 82, 143, 64, 142)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(63, 33, 129, 33, 129, 56, 107, 56, 107, 118, 127, 118, 130, 223, 64, 224, 64, 197, 84, 197, 84, 139, 64, 139)])
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_b2bau"]
-vertices = PackedVector2Array(63, 33, 64, 142, 46, 142, -15, 33, -15, 224, 46, 194, 64, 224, 64, 194)
+vertices = PackedVector2Array(63, 33, 64, 139, 44, 139, -15, 33, -15, 224, 43, 197, 64, 224, 64, 197)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 3, 2, 5), PackedInt32Array(6, 4, 5, 7)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-15, 33, -15, 224, 64, 224, 64, 194, 46, 194, 46, 142, 64, 142, 63, 33)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-15, 33, -15, 224, 64, 224, 64, 197, 43, 197, 44, 139, 64, 139, 63, 33)])
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_n7ruc"]
-vertices = PackedVector2Array(130, 223, 128, 113, 145, 113, 255, 223, 255, 33, 145, 63, 129, 33, 129, 63)
+vertices = PackedVector2Array(130, 223, 128, 118, 149, 118, 255, 223, 255, 33, 148, 56, 129, 33, 129, 56)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 3, 2, 5), PackedInt32Array(6, 4, 5, 7)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(129, 33, 129, 63, 145, 63, 145, 113, 128, 113, 130, 223, 255, 223, 255, 33)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(129, 33, 129, 56, 148, 56, 149, 118, 128, 118, 130, 223, 255, 223, 255, 33)])
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_q6tev")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(-116, -119)
@@ -183,3 +186,6 @@ zoom = Vector2(2.6, 2.6)
 
 [node name="PlayerUnit" parent="." instance=ExtResource("3_vex42")]
 position = Vector2(-94, 23)
+
+[node name="EnemyUnit" parent="." instance=ExtResource("3_lrcwh")]
+position = Vector2(74, 10)

@@ -19,7 +19,7 @@ var sprite : Sprite2D
 func _ready():
 	agent = $NavigationAgent2D
 	sprite = $Sprite
-	move_to_location(Vector2(74, -40))
+	#move_to_location(Vector2(74, -40))
 	
 func _physics_process(delta):
 	if agent.is_navigation_finished(): 
